@@ -1,0 +1,10 @@
+body {
+    height: 1366;
+    background-image: linear-gradient(#ff471a, #ffff1a);
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
