@@ -1,6 +1,8 @@
+import {Destination} from "./destination.js";
 import {Park} from "./park.js";
 import {Museum} from "./museum.js";
 import {Restaurant} from "./restaurant.js";
+import { Destination } from "./destination.js";
 
 class DestinationList {
     destinations = [];
@@ -11,13 +13,7 @@ class DestinationList {
     }
 
     addDestination(destination) {
-        if (destination instanceof Park) {
-            this.destinations.push(destination);
-        }
-        else if (destination instanceof Museum) {
-            this.destinations.push(destination);
-        }
-        else if (destination instanceof Restaurant) {
+        if (destination instanceof Destination) {
             this.destinations.push(destination);
         }
         else {
