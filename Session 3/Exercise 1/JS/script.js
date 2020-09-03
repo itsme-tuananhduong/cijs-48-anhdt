@@ -35,6 +35,8 @@ des.addDestination(m1);
 des.addDestination(m2);
 des.addDestination(r1);
 
-des.findDestination('museum');
+let input = 'museum';
+console.log(`Nhung dia diem co ten ${input} la:`);
+console.log(des.findDestination(input));
 
 console.log(`Tong so tien ban phai tra: ${des.totalPrice}`);

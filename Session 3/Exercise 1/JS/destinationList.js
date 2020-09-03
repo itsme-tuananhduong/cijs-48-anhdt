@@ -1,6 +1,4 @@
 import {Destination} from "./destination.js";
-import {Park} from "./park.js";
-import {Museum} from "./museum.js";
 import {Restaurant} from "./restaurant.js";
 import { Destination } from "./destination.js";
 
@@ -22,12 +20,15 @@ class DestinationList {
     }
 
     findDestination(name) {
-        console.log(`Danh sach cac dia diem co ten ${name}:`);
-        for (let destination of this.destinations) {
-            if (destination.name === name) {
-                console.log(destination);
-            }
-        }
+        return this.destinations.filter(function(x) {
+            return x.name === name;
+        });
+        // console.log(`Danh sach cac dia diem co ten ${name}:`);
+        // for (let destination of this.destinations) {
+        //     if (destination.name === name) {
+        //         console.log(destination);
+        //     }
+        // }
     }
 
     get totalPrice() {
@@ -45,3 +46,20 @@ class DestinationList {
 }
 
 export {DestinationList};
+
+/*
+
+Note:
+Phuong thuc mang js:
+- duyet mang: for/while, for ... of, forEach
+- them phan tu: push(), unshift(), splice()
+- xoa phan tu: pop(), shift(), splice()
+- noi mang: concat(), push(...)
+- cat mang: slice()
+- convert mang --> string: join()
+- sap xep: sort()
+- anh xa thanh 1 mang moi: map()
+- loc: filter()
+...
+
+*/
