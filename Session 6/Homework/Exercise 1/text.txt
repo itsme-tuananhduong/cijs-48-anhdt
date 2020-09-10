@@ -1,0 +1,59 @@
+
+Điểm khác biệt giữa hàm thông thường và arrow function:
+
+- Đầu tiên chắc chắn là cú pháp :)) Cú pháp của Arrow function ngắn gọn hơn hàm thông thường rất nhiều.
+
+- Ngoài ra: 
+    + Hàm thông thường: 'this' đại diện cho object đã gọi hàm, có thể là window, document, một button hoặc bất cứ gì khác.
+    + Arrow function: 'this' luôn đại diện cho object đã định nghĩa Arrow function đó.
+
+Ví dụ: 
+
+- Xét một object như sau:
+
+    var obj = {
+        name: "This is an object",
+        run: function() {
+            console.log(this.name);
+        };
+    };
+
+    obj.run();
+    
+    => Kết quả in ra màn hình console sẽ là "This is an object".
+
+- Tuy nhiên, nếu: 
+
+    var obj = {
+        name: "This is an object",
+        run: function() {
+            var run2 = function() {
+                console.log(this.name);
+            };
+            run2();
+        }
+    };
+
+    obj.run();
+
+=> Kết quả in ra màn hình console lại là undefined vì lúc này 'this' đại diện cho thứ đã gọi đến nó, 
+ở đây là run2(), mà run2() chỉ là một hàm bình thường, nên this trỏ tới global context. 
+Ở đây global context không có name nên sẽ trả về undefined.
+
+- Nếu sử dụng Arrow function:
+
+    var obj = {
+        name: "This is an object",
+        run: function() {
+            var run2 = () => {
+                console.log(this.name);
+            };
+            run2();
+        }
+    };
+
+    obj.run();
+
+=> Kết quả in ra màn hình console sẽ lại trở về "This is an object" bởi run2() được định nghĩa dưới dạng Arrow function, 
+nên 'this' sẽ luôn trỏ tới object đã định nghĩa nó, ở đây chính là obj. 
+Mà obj lại có name nên sẽ có kết quả trả về như trên.

@@ -1,0 +1,126 @@
+#task {
+    font-family: 'Quicksand';
+    display: flex;
+}
+
+#content {
+    width: 500px;
+    height: 75px;
+    border-radius: 5px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    position: relative;
+}
+
+#content:hover {
+    bottom: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+}
+
+#content p {
+    font-family: 'Quicksand';
+    color: white;
+}
+
+#is-completed {
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    position: relative;
+}
+
+#is-completed:hover {
+    bottom: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+}
+
+#is-completed p {
+    font-family: 'Quicksand';
+    color: white;
+}
+
+#date-modified {
+    width: 150px;
+    height: 75px;
+    border-radius: 5px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    position: relative;
+}
+
+#date-modified:hover {
+    bottom: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+}
+
+#date-modified p {
+    font-family: 'Quicksand';
+    color: white;
+}
+
+#form-add-task {
+    width: 745px;
+    height: 75px;
+    border-radius: 5px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    position: relative;
+}
+
+#edit {
+    width: 150px;
+    height: 75px;
+    border-radius: 5px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    position: relative;
+}
+
+#edit:hover {
+    bottom: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+}
+
+#edit p {
+    font-family: 'Quicksand';
+    color: black;
+}
+
+#delete {
+    width: 150px;
+    height: 75px;
+    border-radius: 5px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    position: relative;
+}
+
+#delete:hover {
+    bottom: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+}
+
+#delete p {
+    font-family: 'Quicksand';
+    color: white;
+}

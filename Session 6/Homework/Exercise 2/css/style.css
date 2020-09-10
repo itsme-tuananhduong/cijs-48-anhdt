@@ -1,0 +1,8 @@
+body {
+    background-color: #ff471a;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}

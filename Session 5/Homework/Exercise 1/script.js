@@ -25,17 +25,17 @@ async function deleteData() {
     let result = await firebase.firestore().collection('users').get();
     for (let doc of result.docs) {
         if (typeof(dictionary[`${doc.data().lastName}`]) == 'number') dictionary[`${doc.data().lastName}`]++;
-        else {
-            dictionary[`${doc.data().lastName}`] = 1;
-        }
+        else dictionary[`${doc.data().lastName}`] = 1;
     }
     for (let doc of result.docs) {
         if (dictionary[doc.data().lastName] > 1) {
-            
             await firebase.firestore().collection('users').doc(doc.id).delete();
         }
     }
 }
+
+// lastName = doc.data().lastName
+// dictionary[lastName]
 
 function numberUpdater(number) {
     let num = String(number);
@@ -50,8 +50,8 @@ function numberUpdater(number) {
 
 function addDocs() {
     let obj = {
-        firstName: document.getElementById('first-name').value,
-        lastName: document.getElementById('last-name').value,
+        firstName: document.getElementById('first-name').value.toLowerCase(),
+        lastName: document.getElementById('last-name').value.toLowerCase(),
         email: document.getElementById('email').value,
         phoneNumber: Number(document.getElementById('phone-number').value)
     }; 
@@ -87,3 +87,7 @@ function addDocs() {
         }
     }
 }
+
+// Chu y khi input nen de string de kiem tra xem co phai so hay khong
+
+// let firstName = document.getElementById('form-register').fname.value;
