@@ -18,7 +18,7 @@ let getData = async () => {
             answers.push(answer);
         });
         shuffleArray(answers);
-        
+
         doc.innerHTML += `
             <div class="question">
                 <p>${i + 1}, ${data[i].question}</p>
@@ -62,3 +62,8 @@ let getData = async () => {
 }
 
 getData();
+
+let reload = document.getElementById('reload');
+reload.onclick = () => {
+    location.reload();
+}
